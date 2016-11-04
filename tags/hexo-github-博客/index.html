@@ -14,13 +14,10 @@
 <meta name="author" content="黑色鞋帮" />
 
 
-    
-    
-
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="BlackUpper">
-<meta property="og:url" content="http://blackupper.github.io/index.html">
+<meta property="og:url" content="http://blackupper.github.io/tags/hexo-github-博客/index.html">
 <meta property="og:site_name" content="BlackUpper">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BlackUpper">
@@ -51,13 +48,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>BlackUpper</title>
+<title>Tag: hexo github 博客 | BlackUpper</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -66,10 +61,10 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
+        isHome: false,
         isPost: false,
         isArchive: false,
-        isTag: false,
+        isTag: true,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -259,191 +254,54 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-使用hexo-github搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/11/04/使用hexo-github搭建博客/" class="article-date">
-      <time datetime="2016-11-04T03:19:50.000Z" itemprop="datePublished">2016-11-04</time>
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2016" class="archive-year">2016</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/2016/11/04/使用hexo-github搭建博客/" class="archive-article-date">
+      <time datetime="2016-11-04T03:19:50.000Z" itemprop="datePublished">11-04</time>
 </a>
 
 
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
+        </div>
+         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/04/使用hexo-github搭建博客/">使用hexo+github搭建博客</a>
+      <a class="archive-article-title" href="/2016/11/04/使用hexo-github搭建博客/">使用hexo+github搭建博客</a>
     </h1>
   
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <p>##使用hexo+github搭建博客</p>
-<blockquote>
-<p>最近碰到一些之前就遇到的问题，由于没有很好地做笔记，导致又要重新找资料学习一下相关技术。所以自己使用hexo+github搭建了一个博客，在博客里记录自己的学习经历，这篇博客就介绍下自己使用hexo过程中遇到的坑以及解决方法。</p>
-<p>安装步骤：</p>
-<p>1、安装nodejs：hexo是一款基于Node.js的静态博客框架，所以必须安装nodejs。本机是mac平台，我选择使用homebrew方式安装nodejs。</p>
-</blockquote>
-<pre><code>brew install node
-</code></pre><blockquote>
-<p>2、安装hexo：创建hexo文件夹，在该文件夹下用nodejs自带npm安装。</p>
-</blockquote>
-<pre><code>sudo npm install hexo-cli --no-optional    
-hexo init    
-npm install
-</code></pre><blockquote>
-<p>3、申请github：github是用来做博客的远程创库、域名、服务器之类的，怎么申请账户网上教程一大把。</p>
-<p>4、配置SSHkey：具体见<a href="http://blog.csdn.net/binyao02123202/article/details/20130891" target="_blank" rel="external">github设置添加SSH</a>。运行 git Bash 客户端，输入如下代码：</p>
-</blockquote>
-<pre><code>cd ~/.ssh    
-ls
-</code></pre><p>这两个命令就是检查是否已经存在 id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，那么可以跳过创建SSHkey的步骤。</p>
-<p>创建一个SSHkey：</p>
-<pre><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
-</code></pre><p>运行上面那条命令后会让你输入一个文件名，用于保存刚才生成的 SSH key 代码，如：<figure class="highlight plain"><figcaption><span>public/private rsa key pair.Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">直接Press enter生成 id_rsa 和 id_rsa.pub 两个秘钥文件，接着又会提示你输入两次密码，直接按回车。接下来，就会显示如下代码提示：```The key fingerprint is:01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</div></pre></td></tr></table></figure></p>
-<p>看到上面这段代码说明sshkey创建成功，接下来添加SSHkey到github上面，拷贝id_rsa.pub文件的内容，登录你的github账号，在Account Settings的SSH key子菜单栏页面中添加SSH key。<br>在git Bash中输入以下代码：</p>
-<pre><code>ssh -T git@github.com
-</code></pre><p>如果看到：<code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>，说明已经成功设置SSH密钥。</p>
-<blockquote>
-<p>4、配置hexo和github的关联：建立与你用户名对应的仓库，这里我的仓库名为blackupper.github.io。然后需要在文件夹下面的_config.yml里面配置关联信息(注意冒号后面需要空格)。</p>
-</blockquote>
-<pre><code>deploy:    
-type: git    
-repo: https://github.com/blackupper/blackupper.github.io.git
-branch: master
-</code></pre><p>然后执行命令：</p>
-<pre><code>npm install hexo-deployer-git --save
-</code></pre><blockquote>
-<p>5、后期部署：添加文章</p>
-</blockquote>
-<pre><code>hexo new &quot;postName&quot;
-</code></pre><p>以后每次执行就可以依次输入下面三行命令：</p>
-<pre><code>hexo clean
-hexo generate
-hexo deploy
-</code></pre><p>登录自己的博客看看效果吧<a href="http://your-username.github.io。比如这里我的博客地址就为[http://your-username.github.io](http://your-username.github.io" target="_blank" rel="external">http://your-username.github.io。比如这里我的博客地址就为[http://your-username.github.io](http://your-username.github.io</a>)</p>
-<blockquote>
-<p>6、安装过程遇到的坑：首先，安装hexo的时候一开始使用的命令为</p>
-</blockquote>
-<pre><code>sudo npm install hexo -g。
-</code></pre><p>但是这是hexo3.0之前版本使用的命令，安装之后一直停在：</p>
-<pre><code>dtrace-provider@0.5.0 install /usr/local/lib/node_modules/hexo/node_modules/bunyan/node_modules/dtrace-provider
-node scripts/install.js
-</code></pre><p>3.0之后的包名不一样，于是我使用命令：</p>
-<pre><code>sudo npm install hexo-cli -g
-</code></pre><p>但是之后的操作一直提示以下错误信息：</p>
-<pre><code>{ [Error: Cannot find module &apos;./build/Release/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }    
-{ [Error: Cannot find module &apos;./build/default/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
 
-{ [Error: Cannot find module &apos;./build/Debug/DTraceProviderBindings&apos;] code: &apos;MODULE_NOT_FOUND&apos; }
-</code></pre><p>这是因为这三个文件被拦截，需要翻墙才能安装，当然可以直接使用命令：</p>
-<pre><code>sudo npm install hexo-cli --no-optional
-</code></pre><p>忽略这三个文件的安装。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
+          
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-github-博客/">hexo github 博客</a></li></ul>
     </div>
 
-      
-      <div class="clearfix"></div>
-    </div>
-    
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
-  
 </article>
-
-
-
-
-
-
-
-
-
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/11/03/hello-world/" class="article-date">
-      <time datetime="2016-11-03T08:40:30.000Z" itemprop="datePublished">2016-11-03</time>
-</a>
-
-
-    </div>
+    </div></section>
   
-  <div class="article-inner">
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/11/03/hello-world/">Hello World</a>
-    </h1>
-  
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
     <div class="outer">
