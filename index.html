@@ -297,8 +297,7 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>##使用hexo+github搭建博客</p>
-<blockquote>
+        <blockquote>
 <p>最近碰到一些之前就遇到的问题，由于没有很好地做笔记，导致又要重新找资料学习一下相关技术。所以自己使用hexo+github搭建了一个博客，在博客里记录自己的学习经历，这篇博客就介绍下自己使用hexo过程中遇到的坑以及解决方法。</p>
 <p>安装步骤：</p>
 <p>1、安装nodejs：hexo是一款基于Node.js的静态博客框架，所以必须安装nodejs。本机是mac平台，我选择使用homebrew方式安装nodejs。</p>
@@ -316,15 +315,18 @@ npm install
 </blockquote>
 <pre><code>cd ~/.ssh    
 ls
-</code></pre><p>这两个命令就是检查是否已经存在 id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，那么可以跳过创建SSHkey的步骤。</p>
+</code></pre><blockquote>
+<p>这两个命令就是检查是否已经存在 id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，那么可以跳过创建SSHkey的步骤。</p>
+</blockquote>
 <p>创建一个SSHkey：</p>
 <pre><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
-</code></pre><p>运行上面那条命令后会让你输入一个文件名，用于保存刚才生成的 SSH key 代码，如：<figure class="highlight plain"><figcaption><span>public/private rsa key pair.Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">直接Press enter生成 id_rsa 和 id_rsa.pub 两个秘钥文件，接着又会提示你输入两次密码，直接按回车。接下来，就会显示如下代码提示：```The key fingerprint is:01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</div></pre></td></tr></table></figure></p>
+</code></pre><blockquote>
+<p>运行上面那条命令后会让你输入一个文件名，用于保存刚才生成的 SSH key 代码，如：<figure class="highlight plain"><figcaption><span>public/private rsa key pair.Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt;直接Press enter生成 id_rsa 和 id_rsa.pub 两个秘钥文件，接着又会提示你输入两次密码，直接按回车。接下来，就会显示如下代码提示：```The key fingerprint is:01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</div></pre></td></tr></table></figure></p>
 <p>看到上面这段代码说明sshkey创建成功，接下来添加SSHkey到github上面，拷贝id_rsa.pub文件的内容，登录你的github账号，在Account Settings的SSH key子菜单栏页面中添加SSH key。<br>在git Bash中输入以下代码：</p>
+</blockquote>
 <pre><code>ssh -T git@github.com
-</code></pre><p>如果看到：<code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>，说明已经成功设置SSH密钥。</p>
-<blockquote>
-<p>4、配置hexo和github的关联：建立与你用户名对应的仓库，这里我的仓库名为blackupper.github.io。然后需要在文件夹下面的_config.yml里面配置关联信息(注意冒号后面需要空格)。</p>
+</code></pre><blockquote>
+<p>如果看到：<code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>，说明已经成功设置SSH密钥。<br>4、配置hexo和github的关联：建立与你用户名对应的仓库，这里我的仓库名为blackupper.github.io。然后需要在文件夹下面的_config.yml里面配置关联信息(注意冒号后面需要空格)。</p>
 </blockquote>
 <pre><code>deploy:    
 type: git    
@@ -340,8 +342,8 @@ branch: master
 <pre><code>hexo clean
 hexo generate
 hexo deploy
-</code></pre><p>登录自己的博客看看效果吧<a href="http://your-username.github.io。比如这里我的博客地址就为[http://your-username.github.io](http://your-username.github.io" target="_blank" rel="external">http://your-username.github.io。比如这里我的博客地址就为[http://your-username.github.io](http://your-username.github.io</a>)</p>
-<blockquote>
+</code></pre><blockquote>
+<p>登录自己的博客看看效果吧<a href="http://your-username.github.io。比如这里我的博客地址就为[http://your-username.github.io](http://your-username.github.io" target="_blank" rel="external">http://your-username.github.io。比如这里我的博客地址就为[http://your-username.github.io](http://your-username.github.io</a>)</p>
 <p>6、安装过程遇到的坑：首先，安装hexo的时候一开始使用的命令为</p>
 </blockquote>
 <pre><code>sudo npm install hexo -g。
@@ -391,8 +393,7 @@ node scripts/install.js
 <div class="article-entry" itemprop="articleBody">
     
         
-        <p>##使用hexo+github搭建博客</p>
-<blockquote>
+        <blockquote>
 <p>最近碰到一些之前就遇到的问题，由于没有很好地做笔记，导致又要重新找资料学习一下相关技术。所以自己使用hexo+github搭建了一个博客，在博客里记录自己的学习经历，这篇博客就介绍下自己使用hexo过程中遇到的坑以及解决方法。</p>
 <p>安装步骤：</p>
 <p>1、安装nodejs：hexo是一款基于Node.js的静态博客框架，所以必须安装nodejs。本机是mac平台，我选择使用homebrew方式安装nodejs。</p>
@@ -410,15 +411,18 @@ npm install
 </blockquote>
 <pre><code>cd ~/.ssh    
 ls
-</code></pre><p>这两个命令就是检查是否已经存在 id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，那么可以跳过创建SSHkey的步骤。</p>
+</code></pre><blockquote>
+<p>这两个命令就是检查是否已经存在 id_rsa.pub 或 id_dsa.pub 文件，如果文件已经存在，那么可以跳过创建SSHkey的步骤。</p>
+</blockquote>
 <p>创建一个SSHkey：</p>
 <pre><code>ssh-keygen -t rsa -C &quot;your_email@example.com&quot;
-</code></pre><p>运行上面那条命令后会让你输入一个文件名，用于保存刚才生成的 SSH key 代码，如：<figure class="highlight plain"><figcaption><span>public/private rsa key pair.Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">	</div><div class="line">直接Press enter生成 id_rsa 和 id_rsa.pub 两个秘钥文件，接着又会提示你输入两次密码，直接按回车。接下来，就会显示如下代码提示：```The key fingerprint is:01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</div></pre></td></tr></table></figure></p>
+</code></pre><blockquote>
+<p>运行上面那条命令后会让你输入一个文件名，用于保存刚才生成的 SSH key 代码，如：<figure class="highlight plain"><figcaption><span>public/private rsa key pair.Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): [Press enter]```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt;直接Press enter生成 id_rsa 和 id_rsa.pub 两个秘钥文件，接着又会提示你输入两次密码，直接按回车。接下来，就会显示如下代码提示：```The key fingerprint is:01:0f:f4:3b:ca:85:d6:17:a1:7d:f0:68:9d:f0:a2:db your_email@example.com</div></pre></td></tr></table></figure></p>
 <p>看到上面这段代码说明sshkey创建成功，接下来添加SSHkey到github上面，拷贝id_rsa.pub文件的内容，登录你的github账号，在Account Settings的SSH key子菜单栏页面中添加SSH key。<br>在git Bash中输入以下代码：</p>
+</blockquote>
 <pre><code>ssh -T git@github.com
-</code></pre><p>如果看到：<code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>，说明已经成功设置SSH密钥。</p>
-<blockquote>
-<p>4、配置hexo和github的关联：建立与你用户名对应的仓库，这里我的仓库名为blackupper.github.io。然后需要在文件夹下面的_config.yml里面配置关联信息(注意冒号后面需要空格)。</p>
+</code></pre><blockquote>
+<p>如果看到：<code>Hi username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code>，说明已经成功设置SSH密钥。<br>4、配置hexo和github的关联：建立与你用户名对应的仓库，这里我的仓库名为blackupper.github.io。然后需要在文件夹下面的_config.yml里面配置关联信息(注意冒号后面需要空格)。</p>
 </blockquote>
 <pre><code>deploy:    
 type: git    
@@ -434,8 +438,8 @@ branch: master
 <pre><code>hexo clean
 hexo generate
 hexo deploy
-</code></pre><p>登录自己的博客看看效果吧<a href="http://your-username.github.io。比如这里我的博客地址就为[http://your-username.github.io](http://your-username.github.io" target="_blank" rel="external">http://your-username.github.io。比如这里我的博客地址就为[http://your-username.github.io](http://your-username.github.io</a>)</p>
-<blockquote>
+</code></pre><blockquote>
+<p>登录自己的博客看看效果吧<a href="http://your-username.github.io。比如这里我的博客地址就为[http://your-username.github.io](http://your-username.github.io" target="_blank" rel="external">http://your-username.github.io。比如这里我的博客地址就为[http://your-username.github.io](http://your-username.github.io</a>)</p>
 <p>6、安装过程遇到的坑：首先，安装hexo的时候一开始使用的命令为</p>
 </blockquote>
 <pre><code>sudo npm install hexo -g。
