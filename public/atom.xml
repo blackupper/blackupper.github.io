@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>BlackUpper</title>
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="//public/atom.xml" rel="self"/>
   
   <link href="http://blackupper.github.io/"/>
   <updated>2016-11-04T07:46:44.000Z</updated>
